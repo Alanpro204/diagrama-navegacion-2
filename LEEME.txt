@@ -1,0 +1,22 @@
+GeoUCI · Diagrama interactivo
+
+1. Extrae TODO el RAR en una carpeta y abre index.html en un navegador.
+2. Pasa el cursor por un elemento para ver las imágenes. Pulsa el elemento para fijar la ventana. Escape o × la cierran.
+3. Usa Ajustar a pantalla, 100 % o el control de zoom. Desplázate para recorrer el diagrama.
+
+CAMBIAR UNA IMAGEN
+Reemplaza el archivo correspondiente en assets conservando su nombre. Todas las asociaciones que lo usan se actualizarán.
+
+AÑADIR IMÁGENES O CAMBIAR ASOCIACIONES
+Copia tu imagen a assets y abre asociaciones.js con un editor de texto. Busca el elemento por su nombre o identificador N01–N60. Añade objetos en su lista imagenes:
+
+"imagenes": [
+  { "archivo": "nueva-imagen.png", "cu": "CU 07", "vista": "Detalles de localización" },
+  { "archivo": "otra-imagen.jpg", "cu": "CU 07", "vista": "Estado alternativo" }
+]
+
+El nombre archivo es relativo a assets. Separa los objetos con comas. Respeta las comillas y los corchetes. Guarda y recarga el HTML.
+Una lista vacía "imagenes": [] muestra NA. Si no se encuentra un archivo, la ventana indica NA y su nombre.
+Puedes actualizar nota y cu a mano. Conserva los identificadores N01–N60. Los elementos repetidos tienen identificadores diferentes.
+
+No hace falta un servidor ni conexión a Internet. Conserva index.html, asociaciones.js y assets juntos.
