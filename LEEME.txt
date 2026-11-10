@@ -8,7 +8,7 @@ CAMBIAR UNA IMAGEN
 Reemplaza el archivo correspondiente en assets conservando su nombre. Todas las asociaciones que lo usan se actualizarán.
 
 AÑADIR IMÁGENES O CAMBIAR ASOCIACIONES
-Copia tu imagen a assets y abre asociaciones.js con un editor de texto. Busca el elemento por su nombre o identificador N01–N60. Añade objetos en su lista imagenes:
+Copia tu imagen a assets y abre asociaciones.js con un editor de texto. Busca el elemento por su nombre o identificador. Añade objetos en su lista imagenes:
 
 "imagenes": [
   { "archivo": "nueva-imagen.png", "cu": "CU 07", "vista": "Detalles de localización" },
@@ -17,6 +17,24 @@ Copia tu imagen a assets y abre asociaciones.js con un editor de texto. Busca el
 
 El nombre archivo es relativo a assets. Separa los objetos con comas. Respeta las comillas y los corchetes. Guarda y recarga el HTML.
 Una lista vacía "imagenes": [] muestra NA. Si no se encuentra un archivo, la ventana indica NA y su nombre.
-Puedes actualizar nota y cu a mano. Conserva los identificadores N01–N60. Los elementos repetidos tienen identificadores diferentes.
+Puedes actualizar nota y cu a mano. Conserva los identificadores existentes: coinciden con data-node en index.html y no son consecutivos. Los elementos repetidos tienen identificadores diferentes (por ejemplo, el detalle de localización de consulta y el administrativo).
 
-No hace falta un servidor ni conexión a Internet. Conserva index.html, asociaciones.js y assets juntos.
+No hace falta un servidor ni conexión a Internet. Conserva index.html, new.svg, navegacion.js, asociaciones.js y assets juntos.
+
+ADAPTACIÓN A new.svg
+El diagrama muestra los 25 destinos de new.svg. El SVG original se mantiene intacto y se utiliza como imagen de fondo de las áreas interactivas.
+Se conservan las 43 imágenes originales de assets; todas siguen asociadas a un destino.
+Las funcionalidades que ya no tienen un nodo propio se agrupan así:
+- Mapa del campus: menú lateral, listados, búsquedas, marcadores y rutas.
+- Detalles del evento (consulta): comentarios, reacciones y denuncias.
+- Mis eventos: selección de evento propio y confirmación de eliminación.
+- Solicitar nueva localización: formulario, validaciones y envío.
+- Panel de administración: estadísticas.
+- Detalles de localización y categoría (administración): información y eliminación.
+- Crear/Editar localización: formularios separados, incluida la definición de tipo oficial.
+- Crear/Editar categoría: formularios y validaciones separados.
+- Detalles de la solicitud: aprobación, rechazo y confirmaciones disponibles.
+- Detalle del evento (administración): denuncias, destacado y eliminación.
+- Detalle del usuario: bloqueo, desbloqueo y promoción a gestor.
+Los nuevos identificadores son N61 (Mis solicitudes de localización), N62 (Crear localización), N63 (Detalles de la localización en administración), N64 (Crear categoría) y N65 (Detalles de la categoría).
+Las notas indican cuándo una captura solo ilustra parte de una funcionalidad o falta una pantalla específica. Mis solicitudes de localización conserva la confirmación de envío, no una captura del listado administrativo.
